@@ -6,3 +6,9 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+.idea/
+*.bak
+/public/uploads/
+/node_modules/
+/public/build/
