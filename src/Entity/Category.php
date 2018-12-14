@@ -35,6 +35,29 @@ class Category
      */
     private $icon;
 
+    /** @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\OneToMany(targetEntity="Expense", mappedBy="category")
+     */
+    private $expense;
+
+    /**
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getExpense(): \Doctrine\Common\Collections\Collection
+    {
+        return $this->expense;
+    }
+
+    /**
+     * @param \Doctrine\Common\Collections\Collection $expense
+     */
+    public function setExpense(\Doctrine\Common\Collections\Collection $expense): void
+    {
+        $this->expense = $expense;
+    }
+
+
     public function getId(): ?int
     {
         return $this->id;
